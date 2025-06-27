@@ -11,8 +11,11 @@ import couponRoutes from "./routes/cuponRoutes.js";
 const app = express();
 const port = process.env.PORT || 4000;
 
-// ✅ Secure CORS config (Allow frontend domain only)
-const allowedOrigins = ["https://tomato-8chf.onrender.com"];
+// ✅ Allow both frontend and admin panel
+const allowedOrigins = [
+  "https://tomato-8chf.onrender.com",           // frontend
+  "https://tomato-admin-k2ac.onrender.com"      // admin panel
+];
 
 app.use(
   cors({
@@ -28,9 +31,12 @@ app.use(
   })
 );
 
-// ✅ Optional: Set custom headers manually (backup)
+// Optional headers (backup safety)
 app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "https://tomato-8chf.onrender.com");
+  const origin = req.headers.origin;
+  if (allowedOrigins.includes(origin)) {
+    res.header("Access-Control-Allow-Origin", origin);
+  }
   res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
   res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
   next();
