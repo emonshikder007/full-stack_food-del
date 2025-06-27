@@ -8,26 +8,41 @@ import cartRouter from "./routes/cartRoute.js";
 import orderRouter from "./routes/orderRoute.js";
 import couponRoutes from "./routes/cuponRoutes.js";
 
-// App Config
 const app = express();
 const port = process.env.PORT || 4000;
 
-// ✅ CORS Middleware (Updated)
+// ✅ Secure CORS config (Allow frontend domain only)
+const allowedOrigins = ["https://tomato-8chf.onrender.com"];
+
 app.use(
   cors({
-    origin: "https://tomato-8chf.onrender.com/", // your frontend domain
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("CORS Not Allowed"));
+      }
+    },
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
 );
 
-// Body Parser
+// ✅ Optional: Set custom headers manually (backup)
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "https://tomato-8chf.onrender.com");
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+  res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  next();
+});
+
+// ✅ Middleware
 app.use(express.json());
 
-// DB connection
+// ✅ Connect to MongoDB
 connectDB();
 
-// API Routes
+// ✅ Routes
 app.use("/api/food", foodRouter);
 app.use("/images", express.static("uploads"));
 app.use("/api/user", userRouter);
@@ -35,12 +50,12 @@ app.use("/api/cart", cartRouter);
 app.use("/api/order", orderRouter);
 app.use("/api/coupon", couponRoutes);
 
-// Root route
+// ✅ Root route
 app.get("/", (req, res) => {
-  res.send("API Working");
+  res.send("API Working Successfully 🚀");
 });
 
-// Start server
+// ✅ Start Server
 app.listen(port, () => {
   console.log(`✅ Server running at http://localhost:${port}`);
 });
