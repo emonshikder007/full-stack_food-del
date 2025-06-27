@@ -11,7 +11,7 @@ import couponRoutes from "./routes/cuponRoutes.js";
 const app = express();
 const port = process.env.PORT || 4000;
 
-// ✅ Allow both frontend and admin panel
+
 const allowedOrigins = [
   "https://tomato-8chf.onrender.com",           // frontend
   "https://tomato-admin-k2ac.onrender.com"      // admin panel
@@ -31,7 +31,7 @@ app.use(
   })
 );
 
-// Optional headers (backup safety)
+
 app.use((req, res, next) => {
   const origin = req.headers.origin;
   if (allowedOrigins.includes(origin)) {
