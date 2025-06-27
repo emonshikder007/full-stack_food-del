@@ -1,0 +1,187 @@
+
+ .my-orders {
+
+    margin: 50px 0px;
+
+    min-height: auto;
+
+    padding-bottom: 60px;
+
+ }
+
+ .my-orders .container {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+    margin-top: 30px;
+
+ }
+
+ .my-orders-order {
+
+    display: grid;
+
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 2fr 1fr;
+
+    align-items: center;
+
+    gap: 30px;
+
+    font-size: 14px;
+
+    padding: 10px 20px;
+    
+    color: #454545;
+
+    border: 1px solid tomato;
+
+    border-radius: 8px;
+
+ }
+
+
+ .my-orders-order img {
+
+    width: 50px;
+
+ }
+
+ .my-orders-order p span {
+
+    color: tomato;
+
+ }
+
+ .my-orders-order p b {
+
+    font-weight: 500;
+
+    color: #454545;
+
+ }
+
+   .button {
+
+    background-color: transparent;
+
+    border: 2px solid tomato;
+
+    border-radius: 35px;
+
+    color: tomato;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    letter-spacing: 1px;
+
+    margin: 20px;
+
+    text-align: center;
+
+    text-transform: uppercase;
+
+    height: 44px;
+
+    width: 135px;
+
+    transition: 0.3s;
+
+  }
+  
+  .nx {
+    border-color: tomato;
+
+    color: tomato;
+
+    background-image: linear-gradient(45deg, tomato 50%, transparent 50%);
+
+    background-position: 100%;
+
+    background-size: 400%;
+
+    transition: background 300ms ease-in-out;
+
+    transition: 0.3s;
+
+  }
+  
+  .nx:hover {
+
+    background-position: 0;
+
+    color: #fff;
+
+  }
+  
+
+  .nx:active {
+
+    transform: scale(0.95);
+
+  }
+
+
+  .btn-container {
+
+   display: flex;
+
+   flex-direction: column;
+
+  }
+
+  .no-order {
+
+   display: flex;
+
+   justify-content: center;
+
+   align-items: center;
+
+   font-family: 'outfit', sans-serif;
+
+   color: #00000042;
+
+   font-size: 42px;
+
+   font-weight: 600;
+
+  }
+
+  .jx {
+
+   margin-top: -8px;
+
+  }
+
+
+  @media ( max-width: 900px ) {
+
+    .my-orders-order {
+
+        grid-template-columns: 1fr 2fr 1fr;
+
+        row-gap: 5px;
+
+        font-size: 12px;
+
+    }
+
+    .button {
+
+        font-size: 6px;
+
+        width: 70px;
+
+        height: 28px;
+
+    }
+
+  }

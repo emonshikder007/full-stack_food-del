@@ -1,0 +1,426 @@
+
+
+ .navbar {
+
+    padding: 20px 0px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+ }
+
+
+ .navbar .logo {
+
+    width: 160px;
+
+ }
+
+
+ .navbar_menu {
+
+    height: 60px;
+
+    width: 400px;
+
+    padding-left: 6px;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    border-radius: 20px;
+
+    justify-content: center;
+
+    display: flex;
+
+    align-items: center;
+
+    list-style: none;
+
+    gap: 20px;
+
+    color: #49557e;
+
+    font-size: 19px;
+
+    
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(15px); 
+
+    -webkit-backdrop-filter: blur(15px); 
+    
+    box-shadow: 0 4px 6px rgba(0, 0, 0
+    , 0.2); 
+}
+
+
+
+ .navbar_right {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 40px;
+
+ }
+
+
+ /* Colors */
+:root {
+
+    --yellow: tomato;
+
+    --background: #2c3e50;
+
+  }
+
+/* Basic Button Style */
+.navbar button {
+    
+    background-color: transparent;
+
+    border: 2px solid;
+
+    border-radius: 40px;
+
+    color: tomato;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-self: center;
+
+    font-size: 1rem;
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    margin: 20px;
+
+    padding: 15px 30px;
+
+    text-align: center;
+    
+    text-transform: uppercase;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-weight: 700;
+
+    transition: background 300ms ease-in-out, color 300ms ease-in-out;
+
+  }
+  
+  .navbar button:focus {
+
+    outline: 0;
+
+  }
+  
+  /* Button 4 Style */
+
+  .navbar button.sign_in {
+
+    border-color: var(--yellow);
+
+    color: tomato;
+
+    background-image: linear-gradient(45deg, var(--yellow) 50%, transparent 50%);
+
+    background-size: 400%;
+
+    background-position: 100%;
+
+    transition: background 300ms ease-in-out;
+
+  }
+  
+  .navbar button.sign_in:hover {
+
+    background-position: 0;
+
+    color: #fff;
+
+  }
+
+
+  .navbar .active {
+
+    padding-bottom: 2px;
+
+    border-bottom: 2px solid #49557e;
+
+  }
+
+  .navbar li {
+
+    cursor: pointer;
+
+  }
+
+  .navbar_search_icon {
+
+    position: relative;
+
+  }
+
+  .navbar_search_icon .dot {
+
+    position: absolute;
+
+    min-width: 10px;
+
+    min-height: 10px;
+
+    background: tomato;
+
+    border-radius: 5px;
+
+    top: -8px;
+
+    right: -8px;
+
+  }
+
+
+  .navbar-profile {
+
+    position: relative;
+
+    cursor: pointer;
+
+  }
+
+  .nav-profile-dropdown {
+
+    position: absolute;
+
+    display: none;
+
+    right: 0;
+
+    z-index: 1;
+
+  }
+
+  .navbar-profile:hover .nav-profile-dropdown {
+
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    background-color: #fff2ef;
+
+    padding: 12px 25px;
+
+    border-radius: 4px;
+
+    border: 1px solid tomato;
+
+    outline: 2px solid #fff;
+
+    list-style-type: none;
+
+  }
+
+  .nav-profile-dropdown li  {
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    transition: 0.4s ease;
+
+  }
+
+  .nav-profile-dropdown img {
+
+    width: 20px;;
+
+  }
+
+  .nav-profile-dropdown li:hover {
+
+    color: tomato;
+
+  }
+
+  .nav-profile-dropdown li p {
+
+    display: flex;
+
+  }
+
+  .search-box {
+
+  position: absolute;
+
+  top: 80px;
+
+  right: 80px;
+
+  background: white;
+
+  border-radius: 8px;
+
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+
+
+  padding: 10px;
+
+  z-index: 100;
+
+}
+
+
+.search-box input {
+
+  width: 250px;
+
+  padding: 8px;
+
+  border: 1px solid #ccc;
+
+  border-radius: 5px;
+
+  outline: none;
+
+}
+
+
+.search-suggestions {
+
+  margin-top: 5px;
+
+  list-style: none;
+
+  padding: 0;
+
+  max-height: 200px;
+
+  overflow-y: auto;
+
+}
+
+
+.search-suggestions li {
+
+  padding: 6px 10px;
+
+  cursor: pointer;
+
+}
+
+
+.search-suggestions li:hover {
+
+  background-color: #f0f0f0;
+
+}
+
+.search-toggle-icon {
+
+  cursor: pointer;
+
+}
+
+
+
+
+  @media (max-width: 1050px) {
+
+    .navbar .logo {
+
+      width: 140px;
+
+    }
+
+    .navbar_menu {
+
+      gap: 20px;
+
+      font-size: 17px;
+
+    }
+
+    .navbar_right {
+
+      gap: 30px;
+
+    }
+
+    .navbar_right img {
+
+      width: 22px;
+
+    }
+
+    .navbar_right button {
+
+      padding: 8px 25px;
+
+    }
+
+  }
+
+
+  @media (max-width: 900px) {
+
+    .navbar .logo {
+
+      width: 120px;
+
+    }
+
+    .navbar_menu {
+
+      gap: 15px;
+
+      font-size: 16px;
+
+    }
+
+    .navbar_right {
+
+      gap: 20px;
+
+    }
+
+    .navbar_right img {
+
+      width: 20px;
+
+    }
+
+    .navbar_right button {
+
+      padding: 7px 20px;
+
+      font-size: 15px;
+
+    }
+
+  }
+
+  @media (max-width: 750px) {
+
+    .navbar_menu {
+
+      display: none;
+
+    }
+
+  }

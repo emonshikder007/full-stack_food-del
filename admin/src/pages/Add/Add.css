@@ -1,0 +1,256 @@
+
+ .add {
+
+   width: 70%;
+
+   color: #6d6d6d;
+
+   background: #e0e5ec;
+
+   box-sizing: border-box;
+
+   flex: 1;
+
+   min-height: 125vh;
+
+ }
+
+
+ .add-container {
+
+   background: #e0e5ec;
+
+   margin-left: max( 25vw, 25px );
+
+   border-radius: 20px;
+
+   box-shadow: 8px 8px 16px #babecc,
+   -8px -8px 16px #fff;
+
+   padding: 40px 30px;
+
+   width: 450px;
+
+   display: flex;
+
+   flex-direction: column;
+
+   align-items: center;
+
+   margin-top: 55px;
+
+ }
+
+ .add form {
+
+   gap: 20px;
+
+ }
+
+ .add-img-upload img {
+
+   width: 120px;
+
+   cursor: pointer;
+
+ }
+
+
+
+
+ .add-category-price {
+
+   display: flex;
+
+   gap: 30px;
+
+ }
+
+ .add-category-price select,
+ .add-category-price input {
+
+   max-width: 120px;
+
+   padding: 10px;
+
+ }
+
+
+ .name-input-field,
+ .description-input-field,
+ .category-input-field {
+
+   width: 120%;
+
+    margin: 10px 0;
+
+    margin-left: -15px;
+
+    padding: 14px;
+
+    border: none;
+
+    background: #e0e5ec;
+
+    box-shadow: inset 4px 4px 8px #babecc,
+    inset -4px -4px 8px #fff;
+
+    border-radius: 25px;
+
+    outline: none;
+
+ }
+
+ .price-input-field {
+
+      width: 120%;
+
+    margin: 10px 0;
+
+    padding-left: 40px;
+
+    border: none;
+
+    background: #e0e5ec;
+
+    box-shadow: inset 4px 4px 8px #babecc,
+    inset -4px -4px 8px #fff;
+
+    border-radius: 22px;
+
+    outline: none;
+
+ }
+
+
+  .name-input-field::placeholder,
+ .description-input-field,
+ .price-input-field::placeholder {
+
+    font-weight: 600;
+
+    color: #747474;
+
+ }
+
+ .px {
+
+   font-weight: 700;
+
+   margin-bottom: -8px;
+
+ }
+
+  .add-btn {
+
+   width: 120%;
+
+   padding: 12px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: #e0e5ec;
+
+    box-shadow: 4px 4px 8px #babecc,
+    -4px -4px 8px #fff;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+ }
+
+ .add-btn:hover {
+
+    box-shadow: inset 4px 4px 8px #babecc,
+    inset -4px -4px 8px #fff;
+
+ }
+
+
+ .ux {
+
+   margin-left: -45px;
+
+ }
+
+
+ 
+
+@media (max-width: 768px) {
+
+  .add-container {
+
+    width: 90%;
+
+    padding: 30px 20px;
+
+  }
+
+  .coupon-code-input,
+  .discount {
+
+    padding: 10px;
+
+    font-size: 14px;
+
+  }
+
+  .coupon-add,
+  .expired-coupon {
+
+    width: 100%;
+
+    margin-right: 0;
+
+    margin-bottom: 10px;
+
+  }
+
+  .coupon-btn-container {
+
+    flex-direction: column;
+
+    align-items: center;
+
+    width: 100%;
+
+  }
+}
+
+@media (max-width: 480px) {
+
+  .coupon-input-container {
+
+    padding: 25px 15px;
+
+    border-radius: 15px;
+  }
+
+  .coupon-code-input,
+  .discount {
+
+    padding: 10px;
+
+    font-size: 13px;
+
+  }
+
+  .coupon-add,
+  .expired-coupon {
+
+    font-size: 11px;
+
+
+    padding: 10px;
+
+  }
+  
+}
+
+

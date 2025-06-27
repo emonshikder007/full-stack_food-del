@@ -1,0 +1,170 @@
+ .header {
+
+    height: 34vw;
+
+    margin: 30px auto;
+
+    margin-left: 30px;
+
+    background: url('/header_img.png') no-repeat;
+
+    background-size: contain;
+
+    position: relative;
+
+ }
+
+ .header_contents {
+
+    position: absolute;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: start;
+
+    gap: 1.5vw;
+
+    max-width: 50%;
+
+    bottom: 10%;
+
+    left: 6vw;
+
+    animation: fadeIn 3s;
+
+ }
+
+ .header_contents h2 {
+
+    font-weight: 600;
+
+    color: #fff;
+
+    font-size: max(4.5vw, 22px);
+
+ }
+
+ .header_contents p {
+
+    color: #fff;
+
+    font-size: 1.2vw;
+
+    line-height: 20px;
+
+ }
+
+ :root {
+
+    --yellow: tomato;
+
+    --background: #2c3e50;
+
+  }
+
+/* Basic Button Style */
+.header_contents button {
+    
+    background-color: transparent;
+
+    border: 2px solid;
+
+    border-radius: 40px;
+
+    color: tomato;
+
+    cursor: pointer;
+
+
+    font-size: 1rem;
+
+    font-weight: 400;
+
+
+    height: 50px;
+
+    width: 150px;
+
+    margin-top: 10px;
+
+    text-align: center;
+    
+    text-transform: uppercase;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-weight: 700;
+
+    transition: background 300ms ease-in-out, color 300ms ease-in-out;
+
+  }
+  
+  .header_contents button:focus {
+
+    outline: 0;
+
+  }
+  
+  /* Button 4 Style */
+
+  .header_contents button.btn {
+
+    border-color: #fff;
+
+    color: #fff;
+
+    background-image: linear-gradient(45deg, var(--yellow) 50%, transparent 50%);
+
+    background-size: 400%;
+
+    background-position: 100%;
+
+    transition: background 300ms ease-in-out;
+
+  }
+  
+  .header_contents button.btn:hover {
+
+    background-position: 0;
+
+    color: #fff;
+
+    border-color: tomato;
+
+  }
+
+
+  @media (max-width: 1050px) {
+
+    .header_contents {
+
+      min-width: 45%;
+
+    }
+
+  }
+
+
+  @media (max-width: 750px) {
+
+    .header_contents {
+
+      min-width: 65%;
+
+    }
+
+    .header_contents p {
+
+      display: none;
+
+    }
+
+    .header_contents button {
+
+      padding: 2vw 4vw; 
+
+    }
+
+  }
