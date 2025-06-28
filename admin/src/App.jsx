@@ -13,7 +13,7 @@ import Game from "./pages/Game/Game";
 import ChartPage from "./pages/Chart/Chart";
 
 const App = () => {
-  const url = "http://localhost:4000";
+  const url = "https://tomato-backend-4onk.onrender.com";
   const isAuthenticated =
     localStorage.getItem("isAdminAuthenticated") === "true";
   const location = useLocation();
