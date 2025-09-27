@@ -9,7 +9,6 @@ import Login from "./pages/Login/Login";
 import Coupon from "./pages/Cupon/Cupon";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Game from "./pages/Game/Game";
 import ChartPage from "./pages/Chart/Chart";
 
 const App = () => {
@@ -36,26 +35,7 @@ const App = () => {
             <Route path="/login" element={<Login />} />
 
             {/* ✅ Protected routes */}
-            <Route
-              path="/"
-              element={
-                isAuthenticated ? (
-                  <Game />
-                ) : (
-                  <Navigate to="/login" state={{ from: location }} />
-                )
-              }
-            />
-            <Route
-              path="/chart"
-              element={
-                isAuthenticated ? (
-                  <ChartPage />
-                ) : (
-                  <Navigate to="/login" state={{ from: location }} />
-                )
-              }
-            />
+
 
             <Route
               path="/add"
