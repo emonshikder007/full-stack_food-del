@@ -23,7 +23,7 @@ const Login = () => {
   useEffect(() => {
     const isAuth = localStorage.getItem("isAdminAuthenticated");
     if (isAuth === "true") {
-      navigate("/");
+      navigate("/add");
     }
   }, []);
 
