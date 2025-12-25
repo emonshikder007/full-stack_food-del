@@ -5,7 +5,7 @@ import "./Cupon.css";
 const Coupon = () => {
   const [code, setCode] = useState("");
   const [discount, setDiscount] = useState(0);
-  const url = "http://localhost:4000";
+  const url = "https://tomato-backend-4onk.onrender.com";
 
   const handleAdd = async () => {
     const res = await axios.post(url + "/api/coupon/add", { code, discount });

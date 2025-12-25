@@ -21,20 +21,20 @@ const App = () => {
     <div>
       <ToastContainer />
 
-      {/* ✅ Show navbar & sidebar only when logged in */}
+
       {isAuthenticated && <Navbar />}
       {isAuthenticated && <hr />}
 
-      {/* ✅ Conditionally render layout for authenticated and unauthenticated users */}
+      
       {isAuthenticated ? (
         <div className="app-content">
           <Sidebar />
 
           <Routes>
-            {/* ✅ Public route */}
+            {/*  Public route */}
             <Route path="/login" element={<Login />} />
 
-            {/* ✅ Protected routes */}
+            {/*  Protected routes */}
 
 
             <Route
