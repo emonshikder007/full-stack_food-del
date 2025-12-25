@@ -9,7 +9,6 @@ import Login from "./pages/Login/Login";
 import Coupon from "./pages/Cupon/Cupon";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import ChartPage from "./pages/Chart/Chart";
 
 const App = () => {
   const url = "https://tomato-backend-4onk.onrender.com";
