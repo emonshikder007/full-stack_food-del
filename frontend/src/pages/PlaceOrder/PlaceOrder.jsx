@@ -77,7 +77,7 @@ const PlaceOrder = () => {
       });
 
       if (response.data.success) {
-        localStorage.removeItem("appliedDiscount"); // ✅ clear used coupon
+        localStorage.removeItem("appliedDiscount"); //  clear used coupon
         navigate(`/verify?success=true&orderId=${response.data.orderId}`);
       } else {
         alert("Something went wrong while placing the order.");

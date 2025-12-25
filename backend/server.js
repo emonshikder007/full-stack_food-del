@@ -42,10 +42,10 @@ app.use((req, res, next) => {
   next();
 });
 
-// ✅ Middleware
+//  Middleware
 app.use(express.json());
 
-// ✅ Connect to MongoDB
+// Connect to MongoDB
 connectDB();
 
 // ✅ Routes
@@ -56,12 +56,12 @@ app.use("/api/cart", cartRouter);
 app.use("/api/order", orderRouter);
 app.use("/api/coupon", couponRoutes);
 
-// ✅ Root route
+//  Root route
 app.get("/", (req, res) => {
   res.send("API Working Successfully 🚀");
 });
 
-// ✅ Start Server
+// Start Server
 app.listen(port, () => {
   console.log(`✅ Server running at http://localhost:${port}`);
 });
