@@ -64,4 +64,35 @@ const removeFood = async ( req,res ) => {
 }
 
 
-export { addFood, listFood, removeFood }
+
+//get food details by id
+
+
+const getFoodById = async (req, res) => {
+    try {
+        const food = await foodModel.findById(req.params.id);
+        
+        if (!food) {
+            return res.json({
+                success: false,
+                message: "Product not found"
+            });
+        }
+        
+        res.json({
+            success: true,
+            data: food
+        });
+        
+    } catch (error) {
+        console.log(error);
+        
+        res.json({
+            success: false,
+            message: "Error fetching product"
+        });
+    }
+};
+
+
+export { addFood, listFood, removeFood, getFoodById }
